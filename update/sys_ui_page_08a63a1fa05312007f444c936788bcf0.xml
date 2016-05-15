@@ -25,16 +25,13 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="ciItem in collectits">
-
                             <td class="col-md-2">
                                 <div class="btn-group">
                                     <button class="btn-primary" ng-click="" data-toggle="modal" data-target="#editModal">
                                         <span class="glyphicon glyphicon-pencil"></span> Edit</button>
 
-
-                                    <button class="btn-danger" ng-click="">
+                                    <button class="btn-danger" ng-click="deleteRecord(ciItem.sys_id,ciItem.number)">
                                         <span class="glyphicon glyphicon-remove"></span> Delete</button>
-
                                 </div>
                             </td>
                             <td><img src="{{ciItem.image}}" height="80" width="80"></img>
@@ -59,7 +56,7 @@
         <sys_created_on>2016-05-15 18:43:07</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>08a63a1fa05312007f444c936788bcf0</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>collectit_app</sys_name>
         <sys_package display_value="CollectIt" source="x_snc_collectit">ad6eea1ba05312007f444c936788bc9e</sys_package>
         <sys_policy/>
@@ -67,6 +64,6 @@
         <sys_scope display_value="CollectIt">ad6eea1ba05312007f444c936788bc9e</sys_scope>
         <sys_update_name>sys_ui_page_08a63a1fa05312007f444c936788bcf0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-05-15 20:16:43</sys_updated_on>
+        <sys_updated_on>2016-05-15 21:05:27</sys_updated_on>
     </sys_ui_page>
 </record_update>
