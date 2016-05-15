@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>client side logic</description>
+        <global>false</global>
+        <name>x_snc_collectit.collectit_client_logic</name>
+        <script><![CDATA[var app = angular.module('collectit',[]);
+app.controller('CollectIt',function($scope,$http){
+	
+	$scope.collectits = [];
+	load();
+	
+	function load(){
+		$http.get("<endpoint from REST API Explorer>")
+		.then(function(response){
+			for(var i = 0 ; i < response.data.result.length ; i++){
+				var retObj = {};
+				retObj.number = response.data.result[i].number;
+				retObj.short_description = "";
+				retObj.image = '';
+				$scope.collectits.push(retObj);
+			}
+		},
+			 function(response){
+			     alert("Something did not work right.  The records did not load.");
+		});
+	}
+	
+});]]></script>
+        <script_name>collectit_client_logic</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-15 20:08:23</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>361a879fa05312007f444c936788bcdb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_snc_collectit.collectit_client_logic</sys_name>
+        <sys_package display_value="CollectIt" source="x_snc_collectit">ad6eea1ba05312007f444c936788bc9e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CollectIt">ad6eea1ba05312007f444c936788bc9e</sys_scope>
+        <sys_update_name>sys_ui_script_361a879fa05312007f444c936788bcdb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-15 20:20:25</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

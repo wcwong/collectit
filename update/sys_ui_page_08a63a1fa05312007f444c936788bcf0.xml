@@ -11,20 +11,46 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous" />
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-		
-		<div ng-app="collectit">
-			<div class="container">
-				<h1>CollectIt</h1>
-				<table class="table table-striped">
-					<thead>
-						<th>CollectIt</th>
-						<th>Image</th>
-						<th>Number</th>
-						<th>Short Descrption</th>
-					</thead>
-				</table>
-			</div>
-		</div>
+        <script src="x_snc_collectit.collectit_client_logic.jsdbx"></script>
+
+        <div ng-app="collectit" ng-controller="CollectIt">
+            <div class="container">
+                <h1>CollectIt</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <th>CollectIt</th>
+                        <th>Image</th>
+                        <th>Number</th>
+                        <th>Short Descrption</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="ciItem in collectits">
+
+                            <td class="col-md-2">
+                                <div class="btn-group">
+                                    <button class="btn-primary" ng-click="" data-toggle="modal" data-target="#editModal">
+                                        <span class="glyphicon glyphicon-pencil"></span> Edit</button>
+
+
+                                    <button class="btn-danger" ng-click="">
+                                        <span class="glyphicon glyphicon-remove"></span> Delete</button>
+
+                                </div>
+                            </td>
+                            <td><img src="{{ciItem.image}}" height="80" width="80"></img>
+                            </td>
+                            <td class="col-md-1">
+                                {{ciItem.number}}
+                            </td>
+
+                            <td class="col-md-8">
+                                {{ciItem.short_description}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </j:jelly>]]></html>
         <name>collectit_app</name>
         <processing_script/>
@@ -33,7 +59,7 @@
         <sys_created_on>2016-05-15 18:43:07</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>08a63a1fa05312007f444c936788bcf0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>collectit_app</sys_name>
         <sys_package display_value="CollectIt" source="x_snc_collectit">ad6eea1ba05312007f444c936788bc9e</sys_package>
         <sys_policy/>
@@ -41,6 +67,6 @@
         <sys_scope display_value="CollectIt">ad6eea1ba05312007f444c936788bc9e</sys_scope>
         <sys_update_name>sys_ui_page_08a63a1fa05312007f444c936788bcf0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-05-15 18:50:02</sys_updated_on>
+        <sys_updated_on>2016-05-15 20:16:43</sys_updated_on>
     </sys_ui_page>
 </record_update>
