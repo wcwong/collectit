@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>App for collectit</description>
+        <direct>false</direct>
+        <endpoint>x_snc_collectit_collectit_app.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+    <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		
+		<div ng-app="collectit">
+			<div class="container">
+				<h1>CollectIt</h1>
+				<table class="table table-striped">
+					<thead>
+						<th>CollectIt</th>
+						<th>Image</th>
+						<th>Number</th>
+						<th>Short Descrption</th>
+					</thead>
+				</table>
+			</div>
+		</div>
+    </j:jelly>]]></html>
+        <name>collectit_app</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-15 18:43:07</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>08a63a1fa05312007f444c936788bcf0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>collectit_app</sys_name>
+        <sys_package display_value="CollectIt" source="x_snc_collectit">ad6eea1ba05312007f444c936788bc9e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CollectIt">ad6eea1ba05312007f444c936788bc9e</sys_scope>
+        <sys_update_name>sys_ui_page_08a63a1fa05312007f444c936788bcf0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-15 18:50:02</sys_updated_on>
+    </sys_ui_page>
+</record_update>
