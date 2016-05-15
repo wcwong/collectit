@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="CollectIt" max_length="40" name="x_snc_collectit_collectit" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="4000" name="description" type="string"/>
         <element label="Image" max_length="40" name="image" type="user_image"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="80" name="short_description" type="string"/>
+        <element label="Acquired" max_length="40" name="u_date_acquired" type="glide_date"/>
+        <element label="Date sold or disposed" max_length="40" name="u_date_removed" type="glide_date"/>
+        <element label="In collection" max_length="40" name="u_in_collection" type="boolean"/>
     </element>
 </database>
